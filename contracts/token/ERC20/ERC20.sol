@@ -36,7 +36,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     mapping(address => mapping(address => uint256)) private _allowances;
 
     uint256 private _totalSupply;
-    uint256 delay = 43200 minutes;
+    uint256 private delay = 43200 minutes;
 
     string private _name;
     string private _symbol;
@@ -250,7 +250,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      */
     function _mint(address account, uint256 amount) internal virtual {
         require(account != address(0), "ERC20: mint to the zero address");
-        require(now >= delay, "TimelockController: insufficient delay");
+        require(block.timestamp >= delay, "TimelockController: insufficient delay");
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply += amount;
         _balances[account] += amount;

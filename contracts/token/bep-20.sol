@@ -2,8 +2,8 @@ pragma solidity ^0.8.0;
 
 import "https://github.com/CrazyNFT/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
 
-contract Timber is ERC20 {
-    constructor(uint256 initialSupply) public ERC20("Timber","TIM"){
+contract CRZY is ERC20 {
+    constructor(uint256 initialSupply) public ERC20("CRAZY","CRZY"){
         _mint(msg.sender,initialSupply);
     }
 }

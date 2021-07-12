@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 
     import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol';
     import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol';
-    import "https://github.com/CrazyNFT/openzeppelin-contracts/blob/master//contracts/metatx/MinimalForwarder.sol";
+    import "https://github.com/CrazyNFT/openzeppelin-contracts/blob/master/contracts/metatx/MinimalForwarder.sol";
 
 abstract contract ERC2771Context is Context {
     address immutable _trustedForwarder;
